@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(135deg, #e8f5e9, #ffffff); 
+    color: #333;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background-image: url('background.JPG');
+  background-size: cover;
+  color: white;
+  font-size: 60px;
+}
+
+.content {padding:20px;}
+
+header {
+    background: white; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 120px; /* Increased the logo size */
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #37A73E, #8AD800); 
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #8AD800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow on hover */
+}
+
+.product-grid {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 15px; /* Space between product items */
+    padding: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+footer {
+    background: linear-gradient(135deg, #2C7C41, #37A73E); 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #8AD800;
+}
