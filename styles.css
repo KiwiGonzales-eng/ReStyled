@@ -1,126 +1,159 @@
-/* Global Styles */
+/* Basic Styling */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    background: linear-gradient(135deg, #fafafa, #f0f0f0);
     color: #333;
-    transition: background-color 0.5s ease-in-out;
+}
+header {
+    background: white; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Header with Background */
 .header {
-    padding: 60px;
+    padding: 80px 40px;
     text-align: center;
-    background-image: url('background.JPG');
+    background-image: url('background.jpg'); /* Background image */
     background-size: cover;
+    background-position: center;
     color: white;
     font-size: 60px;
+    font-family: Century Gothic;
+}
+.logo-container {
+    flex: 1;
 }
 
-/* Search Bar */
-.search-bar {
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.navbar {
+    flex: 2;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    justify-content: flex-end;
 }
 
-.search-bar input {
-    width: 200px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
-}
-
-.search-bar button {
-    padding: 8px 16px;
-    border: none;
-    background-color: #37A73E;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.search-bar button:hover {
-    background-color: #8AD800;
-}
-
-/* Filter Options */
-.filter-options {
+.navbar ul {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.filter-options button {
-    padding: 10px 20px;
-    background-color: #37A73E;
-    border: none;
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #8AD800;
+}
+
+.main-header {
+    padding: 120px 20px;
+    text-align: center;
+    background-image: url('header-background.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
     color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.filter-options button:hover {
-    background-color: #8AD800;
+.main-header h1 {
+    font-size: 48px;
+    font-family: Rockwell;
 }
 
-/* Product Grid with Hover Details */
+.main-header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Product Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    gap: 20px;
+    padding: 30px;
+    margin-top: 60px; /* Spacing to prevent overlap */
 }
 
 .product {
-    position: relative;
-    overflow: hidden;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
 .product img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 .product-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    font-family: Franklin Gothic;
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s;
 }
 
-.product:hover img {
-    transform: scale(1.1);
+.product-info p {
+    font-size: 16px;
+    color: #666;
 }
 
-.product:hover .product-info {
-    opacity: 1;
+.buy-btn {
+    padding: 8px 20px;
+    background-color: #37A73E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.buy-btn:hover {
+    background-color: #2C7C41;
 }
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #2C7C41, #37A73E);
+    background: #2C7C41;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 .footer-logo {
-    font-size: 28px;
-    font-weight: 600;
-    color: #ffffff;
+    font-size: 22px;
+    font-family: Rockwell;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
 }
